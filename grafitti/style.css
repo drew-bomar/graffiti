@@ -1,0 +1,54 @@
+#thruster {
+    width: 15px;
+    height: 550px;
+    background: linear-gradient(to bottom, rgb(10, 70, 113),rgb(66, 188, 237), rgb(156, 212, 235));
+    box-shadow:
+        0 0 40px 10px rgba(25, 205, 221, 0.9),
+        0 0 80px 30px #36bbc799,
+        0 0 120px 60px rgba(3, 73, 74, 0.3);
+    position: absolute;
+    border-radius: 50% 50% 0 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    animation: slide2 5s infinite ;
+
+}
+
+#falcon {
+    width: 300px;
+    height: 200px;
+    
+    background: url('../mfalcon.png') no-repeat center;
+    background-size: contain;
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    rotate: -20deg;
+    animation: slide1 5s infinite ;
+    z-index: 3;
+}
+
+body{
+    background-image: url('../Starfield.webp')  ;
+}
+
+@keyframes slide1 {
+  0% {
+    transform: rotateZ(-30deg) rotateY(-10deg) translateX(-500px) translateY(-200px) translateZ(-1000px);
+  }
+
+  100% {
+    transform: rotateZ(-30deg) rotateY(-10deg) translateX(400px) translateY(500px) translateZ(-1000px);
+  }
+}
+@keyframes slide2 {
+  0% {
+    transform: rotateZ(-110deg) rotateY(-15deg) translateX(-100px) translateY(-525px) translateZ(-750px) ;
+  }
+
+  100% {
+    transform: rotateZ(-110deg) rotateY(-15deg) translateX(250px) translateY(575px) translateZ(1300px);
+  }
